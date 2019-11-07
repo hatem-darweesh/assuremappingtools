@@ -6,6 +6,7 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 ### Operating System
 
 - Ubuntu 16.04
+- [Ununtu 18.04](https://github.com/hatem-darweesh/assuremapingtools/wiki)
 
 ### Prerequisites libraries: 
 
