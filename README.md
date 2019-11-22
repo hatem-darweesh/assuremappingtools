@@ -10,7 +10,8 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 
 ### Prerequisites libraries: 
 
-- tinyxml, glut, glew, pcl
+- tinyxml, glut, glew, pcl, 
+- for lanelet2 extention: libpugixml, libgeographic
 
 ### GPU acceleration 
 - The editor works faster with GPU accelerator specially for large maps
