@@ -43,3 +43,7 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 
 ### Tutorials
 - [Video Tutorials](https://www.youtube.com/watch?v=p_4HwJvu084&list=PLVAImlqqGbr4G8GXMsqp6dMhbKxTCEnrh&index=1)
+
+### Known Issues
+- lat/lon coordinates projection is using only MGRSProjector added by the autoware team. 
+- When saving from any type to lanelet2 projection is mostly incorrect. but the map is usable is lat/lon is not important, also the map can't be projected in sattelite imagery in JSOM, but still could be edited. 
