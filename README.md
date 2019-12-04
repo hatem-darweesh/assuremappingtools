@@ -16,12 +16,16 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 ### GPU acceleration 
 - The editor works faster with GPU accelerator specially for large maps
 
-### Supported Roadnetwork Map formates 
+### Supported Roadnetwork Map formates (Load)
 - [OpenPlanner](https://gitlab.com/autowarefoundation/autoware.ai/core_planning) map format .kml 
 - Signle path file .csv 
 - Vector Map, collection of .csv files composing the map
 - [OpenDRIVE](http://www.opendrive.org/), is open file format for the logical description of road networks .xodr
-- [Lanelet](https://github.com/fzi-forschungszentrum-informatik/Lanelet2), _comming soon_
+- [Lanelet2](https://github.com/fzi-forschungszentrum-informatik/Lanelet2), map format .osm, with autoware extention
+
+### Supported Roadnetwork Map formates (Save)
+- [OpenPlanner](https://gitlab.com/autowarefoundation/autoware.ai/core_planning) map format .kml 
+- [Lanelet2](https://github.com/fzi-forschungszentrum-informatik/Lanelet2), map format .osm
 
 ### Supported Pointcloud data
 - pointcloud map .pcd files
