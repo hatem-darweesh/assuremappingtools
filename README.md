@@ -25,6 +25,7 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 
 ### Supported Roadnetwork Map formates (Save)
 - [OpenPlanner](https://gitlab.com/autowarefoundation/autoware.ai/core_planning) map format .kml 
+- Google Earth .kml format, if only the loaded vector map has GPS information.
 - [Lanelet2](https://github.com/fzi-forschungszentrum-informatik/Lanelet2), map format .osm
 
 ### Supported Pointcloud data
