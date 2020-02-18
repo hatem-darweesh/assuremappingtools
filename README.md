@@ -44,6 +44,7 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 
 ### Tutorials
 - [Video Tutorials](https://www.youtube.com/watch?v=p_4HwJvu084&list=PLVAImlqqGbr4G8GXMsqp6dMhbKxTCEnrh&index=1)
+- [Video Tutorials V0.2](https://youtu.be/PXcE7XMSKck)
 
 ### Known Issues
 - lat/lon coordinates projection is using only MGRSProjector added by the autoware team. 
