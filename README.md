@@ -21,7 +21,7 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
     don't forget to checkout ver 2.4.13.7, default git clone download ver 4.0
 2. Install ROS [melodic](http://wiki.ros.org/melodic/Installation/Ubuntu)
 3. Install libtinyxml, freeglut3, libglew, libpcl1, libpugixml-dev, libgeographic
-4. Install ros-melodic-sound-play, ros-melodic-pcl-ros
+4. Install ros-melodic-pcl-ros
 
 ### GPU acceleration 
 - The editor works faster with GPU accelerator specially for large maps
