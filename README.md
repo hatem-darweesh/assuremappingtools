@@ -1,14 +1,14 @@
 ![Assure logo](https://user-images.githubusercontent.com/20182801/61394821-fb224f00-a8fe-11e9-82d5-6e008df6710e.png)
 ![banner](https://user-images.githubusercontent.com/20182801/61394945-3e7cbd80-a8ff-11e9-8930-f827ef2cfd69.png)
-# ASSURE maping tools
+# ASSURE mapping tools
 Desktop based tool for viewing, editing and saving road network maps for autonomous vehicle platforms such as Autoware.
 
 ### Operating System
 
 - Ubuntu 16.04
 - Ununtu 18.04 
-  [Fast fix](https://github.com/hatem-darweesh/assuremapingtools/wiki), or 
-  [Custom build branch](https://github.com/hatem-darweesh/assuremapingtools/tree/ubuntu18.04_build)
+  [Fast fix](https://github.com/hatem-darweesh/assuremappingtools/wiki), or 
+  [Custom build branch](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build)
 
 ### Prerequisites libraries: 
 - For Ubuntu 16.04: 
