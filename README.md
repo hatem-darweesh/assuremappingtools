@@ -61,7 +61,12 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:libs
 - [Video Tutorials](https://www.youtube.com/watch?v=p_4HwJvu084&list=PLVAImlqqGbr4G8GXMsqp6dMhbKxTCEnrh&index=1)
 - [Video Tutorials V0.2](https://youtu.be/PXcE7XMSKck)
 
+## New features
+- Saving lanelet2 using either UTM from original lanelet library or MGRS from the autoware extention. 
+- ASSURE map editor save the projection data with the .kml and .osm files to be use when the map is loaded. 
+- Accurate conversion from vector map to lanelet2 is available. use should find the projection string for the ptoj library online. 
+- This [website](https://spatialreference.org/ref/epsg/2449/) provides prepared projection string, if you select [Proj4js format](https://spatialreference.org/ref/epsg/2449/proj4js/). you will get this string which represent central Japan area.
+
 ### Known Issues
-- Lanelet2 loading and saving, only UTM projection is used with GPS lat/lon origin. 
-- Projection string is not utilized yet.
 - No support for multi-storey parking maps yet.
+- Exporting traffic lights and signs to lanelet2 doesn't work as expected. 
