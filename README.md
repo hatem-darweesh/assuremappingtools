@@ -3,6 +3,8 @@
 # ASSURE mapping tools
 Desktop based tool for viewing, editing and saving road network maps for autonomous vehicle platforms such as Autoware.
 
+### * News: V0.5 buil for Ubuntu 18.04 is now available in separate [branch](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build). 
+
 ### Operating System
 
 - Ubuntu 16.04
