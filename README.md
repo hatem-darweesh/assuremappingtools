@@ -11,14 +11,14 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
   [Custom build branch](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build)
 
 ### Prerequisites libraries: 
-- For Ubuntu 16.04: 
+- For Ubuntu 16.04: (master branch)
 1. Install [OpenCV 2.4](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
     don't forget to checkout ver 2.4.13.7, default git clone download ver 4.0
 2. Install ROS [kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 3. Install libtinyxml, freeglut3, libglew, libpcl1.7, libpugixml-dev, libgeographic
 4. Install ros-kinetic-pcl-ros
 
-- For Ubuntu 18.04 
+- [For Ubuntu 18.04](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build)
 1. Install [OpenCV 2.4](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
     don't forget to checkout ver 2.4.13.7, default git clone download ver 4.0
 2. Install ROS [melodic](http://wiki.ros.org/melodic/Installation/Ubuntu)
@@ -69,4 +69,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:libs
 
 ### Known Issues
 - No support for multi-storey parking maps yet.
-- Exporting traffic lights and signs to lanelet2 doesn't work as expected. 
+- Exporting traffic lights and signs to lanelet2 require connection all Ids correctly between light-lane-stopline. 
