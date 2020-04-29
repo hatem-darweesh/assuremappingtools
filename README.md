@@ -60,8 +60,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:libs
 - Crossings 
 
 ### Tutorials
-- [Video Tutorials](https://www.youtube.com/watch?v=p_4HwJvu084&list=PLVAImlqqGbr4G8GXMsqp6dMhbKxTCEnrh&index=1)
+- [Video Tutorials V0.5](https://youtu.be/lignj-gVGVg)
 - [Video Tutorials V0.2](https://youtu.be/PXcE7XMSKck)
+- [Older Video Tutorials](https://www.youtube.com/watch?v=p_4HwJvu084&list=PLVAImlqqGbr4G8GXMsqp6dMhbKxTCEnrh&index=1)
 
 ## New features
 - Saving lanelet2 using either UTM from original lanelet library or MGRS from the autoware extention. 
