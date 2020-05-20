@@ -1,5 +1,5 @@
 ![Assure logo](https://user-images.githubusercontent.com/20182801/61394821-fb224f00-a8fe-11e9-82d5-6e008df6710e.png)
-![banner](https://user-images.githubusercontent.com/20182801/82500247-fd13fa80-9b2d-11ea-899f-6c63164eb14a.png)
+![banner](https://user-images.githubusercontent.com/20182801/61394945-3e7cbd80-a8ff-11e9-8930-f827ef2cfd69.png)
 # ASSURE maping tools (Ubuntu 18.04 build)
 Desktop based tool for viewing, editing and saving road network maps for autonomous vehicle platforms such as Autoware.
 
@@ -61,3 +61,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:libs
 ### Known Issues
 - No support for multi-storey parking maps yet.
 - Exporting traffic lights and signs to lanelet2 require connection all Ids correctly between light-lane-stopline. 
+
+### Screenshot
+![UI](https://user-images.githubusercontent.com/20182801/82500247-fd13fa80-9b2d-11ea-899f-6c63164eb14a.png)
