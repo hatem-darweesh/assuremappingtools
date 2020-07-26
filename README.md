@@ -24,8 +24,8 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 1. Install [OpenCV 2.4](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
     don't forget to checkout ver 2.4.13.7, default git clone download ver 4.0
 2. Install ROS [melodic](http://wiki.ros.org/melodic/Installation/Ubuntu)
-3. Install libtinyxml, freeglut3, libglew, libpcl1, libpugixml-dev, libgeographic, libplib, libglm
-4. Install ros-melodic-pcl-ros
+3. Install `libtinyxml freeglut3 libpcl1 libgeographic-dev libplib-dev libglm-dev`
+4. Install `ros-melodic-pcl-ros`  
 
 - Library link issue:
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:libs 
