@@ -3,23 +3,17 @@
 # ASSURE mapping tools
 Desktop based tool for viewing, editing and saving road network maps for autonomous vehicle platforms such as Autoware.
 
-### * News: V0.5 build for Ubuntu 18.04 is now available in separate [branch](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build). 
-
 ### Operating System
+- [Ubuntu 16.04](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu16_04_build)
+- [Ununtu 18.04](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build), old version
+- master is latest version based on 18.04
 
-- Ubuntu 16.04
-- Ununtu 18.04 
-  [Fast fix](https://github.com/hatem-darweesh/assuremappingtools/wiki), or 
-  [Custom build branch](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build)
+### Docker installation
+1. Install docker to your system
+2. $ sh build-docker.sh (will build the image on your system)
+3. $ .run-docker (will run the assure mapping tools container with GUI support)
 
-### Prerequisites libraries: 
-- For Ubuntu 16.04: (master branch)
-1. Install [OpenCV 2.4](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
-    don't forget to checkout ver 2.4.13.7, default git clone download ver 4.0
-2. Install ROS [kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
-3. Install libtinyxml, freeglut3, libglew, libpcl1.7, libpugixml-dev, libgeographic
-4. Install ros-kinetic-pcl-ros
-
+### Direct installation, prerequisites libraries: 
 - [For Ubuntu 18.04](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build)
 1. Install [OpenCV 2.4](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
     don't forget to checkout ver 2.4.13.7, default git clone download ver 4.0
@@ -29,6 +23,8 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 
 - Library link issue:
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:libs 
+
+- If still there are library linking problems use the [Fast fix](https://github.com/hatem-darweesh/assuremappingtools/wiki)
 
 ### GPU acceleration 
 - The editor works faster with GPU accelerator specially for large maps
@@ -65,6 +61,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:libs
 - [Older Video Tutorials](https://www.youtube.com/watch?v=p_4HwJvu084&list=PLVAImlqqGbr4G8GXMsqp6dMhbKxTCEnrh&index=1)
 
 ## New features
+- Improved OpenDRIVE parsing
 - Saving lanelet2 using either UTM from original lanelet library or MGRS from the autoware extention. 
 - ASSURE map editor save the projection data with the .kml and .osm files to be use when the map is loaded. 
 - Accurate conversion from vector map to lanelet2 is available. use should find the projection string for the ptoj library online. 

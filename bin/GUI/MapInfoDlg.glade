@@ -223,7 +223,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_right">79</property>
-                <property name="label" translatable="yes">Origin: </property>
+                <property name="label" translatable="yes">Origin UTM: </property>
                 <attributes>
                   <attribute name="font-desc" value="&lt;Enter Value&gt; 12"/>
                   <attribute name="weight" value="bold"/>
@@ -323,7 +323,7 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">10</property>
+            <property name="position">9</property>
           </packing>
         </child>
         <child>
@@ -334,7 +334,7 @@
               <object class="GtkLabel" id="label5">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">    </property>
+                <property name="label" translatable="yes">Origin: </property>
                 <attributes>
                   <attribute name="font-desc" value="&lt;Enter Value&gt; 12"/>
                   <attribute name="weight" value="bold"/>
@@ -431,7 +431,7 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">11</property>
+            <property name="position">10</property>
           </packing>
         </child>
       </object>
