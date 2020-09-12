@@ -8,9 +8,6 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 ### Operating System
 
 - Ubuntu 16.04
-- Ununtu 18.04 
-  [Fast fix](https://github.com/hatem-darweesh/assuremappingtools/wiki), or 
-  [Custom build branch](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build)
 
 ### Prerequisites libraries: 
 - For Ubuntu 16.04: (master branch)
@@ -20,15 +17,10 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 3. Install libtinyxml, freeglut3, libglew, libpcl1.7, libpugixml-dev, libgeographic
 4. Install ros-kinetic-pcl-ros
 
-- [For Ubuntu 18.04](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build)
-1. Install [OpenCV 2.4](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
-    don't forget to checkout ver 2.4.13.7, default git clone download ver 4.0
-2. Install ROS [melodic](http://wiki.ros.org/melodic/Installation/Ubuntu)
-3. Install libtinyxml, freeglut3, libglew, libpcl1, libpugixml-dev, libgeographic, libplib, libglm
-4. Install ros-melodic-pcl-ros
-
 - Library link issue:
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:libs 
+
+- If still there is a library problem use the [Fast fix](https://github.com/hatem-darweesh/assuremappingtools/wiki)
 
 ### GPU acceleration 
 - The editor works faster with GPU accelerator specially for large maps
