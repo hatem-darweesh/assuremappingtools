@@ -66,11 +66,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:libs
 - [Older Video Tutorials](https://www.youtube.com/watch?v=p_4HwJvu084&list=PLVAImlqqGbr4G8GXMsqp6dMhbKxTCEnrh&index=1)
 
 ## New features
-- Improved OpenDRIVE parsing
-- Saving lanelet2 using either UTM from original lanelet library or MGRS from the autoware extention. 
+- New OpenDRIVE parser
 - ASSURE map editor save the projection data with the .kml and .osm files to be use when the map is loaded. 
 - Accurate conversion from vector map to lanelet2 is available. use should find the projection string for the ptoj library online. 
 - This [website](https://spatialreference.org/ref/epsg/2449/) provides prepared projection string, if you select [Proj4js format](https://spatialreference.org/ref/epsg/2449/proj4js/). you will get this string which represent central Japan area.
+- Documentation document is uploaded
 
 ### Known Issues
 - No support for multi-storey parking maps yet.
