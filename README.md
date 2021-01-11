@@ -14,27 +14,26 @@ Desktop based tool for viewing, editing and saving road network maps for autonom
 - master is latest version based on 18.04
 
 ### Docker installation
-In order to have NVIDIA support in the docker from the host, `mesa-utils` is needed inorder to use `glxinfo` to get the information of NVIDIA driver on the host.
+In order to have NVIDIA support in the docker from the host, `mesa-utils` is needed to use `glxinfo` and getting the information of NVIDIA driver.
 ```
 sudo apt install mesa-utils
 ```
 
-Build docker image using the provided build script to build the image on your system.
-If the current branch is `master` the script will automatically provide 2 build tags, one as `latest` and the other will use the information from `git describe` to provide a clear information where is this build coming from.
+Use build docker script to build the image on your system.
+If the current branch is `master` the script will automatically build the image and tag it as `master`.
 ```
 sh build-docker.sh
 ```
 
-Use the following command to run the container by replacing `{/TAG/}` with the actual tag name.
-for example in case of building `master` branch, `{/TAG/}` could be replaced to be `latest`.
+Use run docker script to run the container. If no argument is provided it will run `master` tag by defualt.
 ```
-xhost + && \
-docker run -it --rm \
---env="DISPLAY=$DISPLAY" \
---volume=/tmp/.X11-unix:/tmp/.X11-unix \
---device=/dev/dri/card0:/dev/dri/card0 \
---privileged \
-zatitech/assuremappingtools:{/TAG/}
+./run-docker
+```
+
+In case you want to run another tag, it should be provided as an argument to the run script.
+for example in case of building branch `v0.5`, the expected run should be:
+```
+./run-docker v0.5
 ```
 
 ### Direct installation, prerequisites libraries: 
