@@ -1,2 +1,12 @@
-DIR_PATH=$PWD/bin
-xhost + && docker run -it --rm -v $DIR_PATH:/data --env="DISPLAY=$DISPLAY" --volume=/tmp/.X11-unix:/tmp/.X11-unix --device=/dev/dri/card0:/dev/dri/card0 --privileged bin
+#!/bin/bash
+
+IMAGE_NAME="zatitech/assuremappingtools"
+TAG="0.5-5-g829bcfb"
+
+xhost + && \
+docker run -it --rm \
+--env="DISPLAY=$DISPLAY" \
+--volume=/tmp/.X11-unix:/tmp/.X11-unix \
+--device=/dev/dri/card0:/dev/dri/card0 \
+--privileged \
+${IMAGE_NAME}:${TAG}

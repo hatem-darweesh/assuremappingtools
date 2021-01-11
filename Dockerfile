@@ -10,7 +10,7 @@ RUN sed -i 's|http://archive.|http://jp.archive.|g' /etc/apt/sources.list
 RUN \
   apt-get update && \
   apt-get -y install libgl1-mesa-glx libgl1-mesa-dri libgtk-3-dev libcanberra-gtk-module libcanberra-gtk3-module \
-  mesa-utils xserver-xorg-video-all software-properties-common libnvidia-gl-440 && \
+  mesa-utils xserver-xorg-video-all software-properties-common module-init-tools && \
   rm -rf /var/lib/apt/lists/*
 
 # Install assuremappingtools required libraries
@@ -19,6 +19,11 @@ RUN \
   apt-get -y install freeglut3 libglew2.0 libgeographic17 libtinyxml2-6 libpugixml1v5 \
   ros-melodic-pcl-ros libopencv-dev ros-melodic-cv-bridge && \
   rm -rf /var/lib/apt/lists/*
+
+# Adding Nvidia Support
+ADD NVIDIA-DRIVER.run /tmp/NVIDIA-DRIVER.run
+RUN sh /tmp/NVIDIA-DRIVER.run -a -N --ui=none --no-kernel-module
+RUN rm /tmp/NVIDIA-DRIVER.run
 
 # Add assuremappingtools binaries into the image
 COPY ./bin /assuremappingtools
