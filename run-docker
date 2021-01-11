@@ -1,2 +1,0 @@
-DIR_PATH=$PWD/bin
-xhost + && docker run -it --rm -v $DIR_PATH:/data --env="DISPLAY=$DISPLAY" --volume=/tmp/.X11-unix:/tmp/.X11-unix --device=/dev/dri/card0:/dev/dri/card0 --privileged bin
