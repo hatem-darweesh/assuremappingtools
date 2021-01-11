@@ -29,11 +29,18 @@ Use run docker script to run the container. If no argument is provided it will r
 ```
 ./run-docker
 ```
-
-In case you want to run another tag, it should be provided as an argument to the run script.
-for example in case of building branch `v0.5`, the expected run should be:
+for more information how to use `run-docker` check the help
 ```
-./run-docker v0.5
+$ ./run-docker -h
+Usage: run-docker [options]
+
+This run script will assist you to run assuremappingtools container
+
+    -h,--help               Show this help
+  Optional:
+    -b,--branch             Branch name or tag name, if not provided it uses master.
+    -w,--workspace          Absolute path for the working directory, if not provided no workspace added
+                            This should be used to access your files on the host machine.
 ```
 
 ### Direct installation, prerequisites libraries: 
