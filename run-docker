@@ -65,6 +65,7 @@ fi
 
 xhost + && \
 docker run -it --rm \
+--ipc=host \
 --env="DISPLAY=$DISPLAY" \
 ${ADD_VOLUME} \
 --volume=/tmp/.X11-unix:/tmp/.X11-unix \
