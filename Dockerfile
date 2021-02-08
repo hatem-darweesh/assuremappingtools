@@ -17,7 +17,7 @@ RUN \
 RUN \
   apt-get update && \
   apt-get -y install freeglut3 libglew2.0 libgeographic17 libtinyxml2-6 libpugixml1v5 \
-  ros-melodic-pcl-ros libopencv-dev ros-melodic-cv-bridge && \
+  ros-melodic-pcl-ros libopencv-dev ros-melodic-cv-bridge ros-melodic-lanelet2* && \
   rm -rf /var/lib/apt/lists/*
 
 # Adding Nvidia Support
