@@ -50,7 +50,7 @@ done
 if [ -z "$TAG" ]
   then
     echo "No specific tag provided using 'master'"
-    TAG=master
+    TAG=master-hotfix
 else
     echo "tag specified using '${TAG}'"
 fi
@@ -65,9 +65,9 @@ fi
 
 xhost + && \
 docker run -it --rm \
+--runtime=nvidia \
 --env="DISPLAY=$DISPLAY" \
 ${ADD_VOLUME} \
 --volume=/tmp/.X11-unix:/tmp/.X11-unix \
---device=/dev/dri/card0:/dev/dri/card0 \
 --privileged \
 zatitech/assuremappingtools:${TAG}
