@@ -1,0 +1,32 @@
+# version: '3'
+#For the Application to run from docker you need first to run: 
+# $ xhost + local:
+
+services:  
+  assure-app:
+    container_name: assure-smt
+    image: zati/assure-smt:0.8.9
+    network_mode: host    
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+    environment:
+      - "DISPLAY"
+      - "NVIDIA_VISIBLE_DEVICES=all" 
+      - "NVIDIA_DRIVER_CAPABILITIES=all" 
+    privileged: true
+    restart: unless-stopped    
+    # command: tail -f /dev/null    
+    deploy:  
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia 
+              count: 1
+              capabilities: [gpu]
+    volumes:
+      - type: bind
+        source: /dev
+        target: /dev
+      - /home/user/data:/root/data

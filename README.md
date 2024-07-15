@@ -9,55 +9,36 @@
 Desktop based tool for viewing, editing and saving road network maps for autonomous vehicle platforms such as Autoware.
 
 ### Operating System
-- [Ubuntu 16.04](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu16_04_build)
-- [Ununtu 18.04](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build), old version
-- master is latest version based on 18.04
+- Docker version. only need Docker and docker compose. 
 
 ### Docker installation
-In order to have NVIDIA support in the docker from the host, `mesa-utils` is needed to use `glxinfo` and getting the information of NVIDIA driver.
+On the host: 
+1. Install [Docker](https://docs.docker.com/desktop/install/ubuntu/#install-docker-desktop).
+2. Test docker works by following the helloworld tutorial. 
+3. Install [nvidia container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/1.14.5/install-guide.html). 
+4. Test that you have access to nvidia from docker by running either (glxgears or nvidia-smi)
+5. You might need to install the following on the host:
 ```
 sudo apt install mesa-utils
 ```
 
-Use build docker script to build the image on your system.
-If the current branch is `master` the script will automatically build the image and tag it as `master`.
+### Before Docker Build 
+Set your data folders by modifying the followiing in the docker compose yaml file ()
 ```
-sh build-docker.sh
-```
-
-Use run docker script to run the container. If no argument is provided it will run `master` tag by defualt.
-```
-./run-docker
-```
-for more information how to use `run-docker` check the help
-```
-$ ./run-docker -h
-Usage: run-docker [options]
-
-This run script will assist you to run assuremappingtools container
-
-    -h,--help               Show this help
-  Optional:
-    -b,--branch             Branch name or tag name, if not provided it uses master.
-    -w,--workspace          Absolute path for the working directory, if not provided no workspace added
-                            This should be used to access your files on the host machine.
+- /home/user/data:/root/data
 ```
 
-### Direct installation, prerequisites libraries: 
-- [For Ubuntu 18.04](https://github.com/hatem-darweesh/assuremappingtools/tree/ubuntu18.04_build)
-1. Install [OpenCV 2.4](https://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
-    don't forget to checkout ver 2.4.13.7, default git clone download ver 4.0
-2. Install ROS [melodic](http://wiki.ros.org/melodic/Installation/Ubuntu)
-3. Install libtinyxml, freeglut3, libglew, libpcl1, libpugixml-dev, libgeographic, libplib, libglm
-4. Install ros-melodic-pcl-ros
 
-- Library link issue:
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:libs 
+### Build Docker Image: 
+```
+docker compose -f docker-compose-linux-app-nvidia.yaml build
+```
 
-- If still there are library linking problems use the [Fast fix](https://github.com/hatem-darweesh/assuremappingtools/wiki)
-
-### GPU acceleration 
-- The editor works faster with GPU accelerator specially for large maps
+### Start ASSURE SMT: 
+```
+xhost + local:
+docker compose -f docker-compose-linux-app-nvidia.yaml up
+```
 
 ### Supported Roadnetwork Map formates (Load)
 - [OpenPlanner](https://gitlab.com/autowarefoundation/autoware.ai/core_planning) map format .kml 
