@@ -36,6 +36,8 @@ Set your data folders by modifying the followiing in the docker compose yaml fil
 ```
 - /home/user/data:/root/data
 ```
+### Important for Windows: 
+On Windows you need to make sure the "ros_entrypoint.sh" End of Line Sequence is actually "LF" not "CRLF". Can be modified from VSCode. Change CRLF to LF then save the file. 
 
 
 ### Build Docker Image (Ubuntu): 
