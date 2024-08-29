@@ -1,0 +1,35 @@
+# version: '3'
+
+services:
+  
+  ros1-dev:
+    container_name: assure-smt-wsl
+    image: zati/assuremappingtools:0.8.9
+    network_mode: host 
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+    environment:
+      - DISPLAY=:0
+      - NVIDIA_VISIBLE_DEVICES=all # Comment for CPU only 
+      - NVIDIA_DRIVER_CAPABILITIES=all # Comment for CPU only 
+      - WAYLAND_DISPLAY=wayland-0
+      - XDG_RUNTIME_DIR=/mnt/wslg/runtime-dir
+      - PULSE_SERVER=/mnt/wslg/PulseServer
+    privileged: true
+    restart: unless-stopped    
+    deploy:  # Comment for CPU only 
+      resources: # Comment for CPU only 
+        reservations: # Comment for CPU only 
+          devices: # Comment for CPU only 
+            - driver: nvidia # Comment for CPU only 
+              count: 1 # Comment for CPU only 
+              capabilities: [gpu] # Comment for CPU only 
+    volumes:
+      - type: bind
+        source: /dev
+        target: /dev
+      - /run/desktop/mnt/host/wslg/.X11-unix:/tmp/.X11-unix
+      - /run/desktop/mnt/host/wslg:/mnt/wslg
+      - /home/user/data:/root/data

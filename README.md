@@ -8,10 +8,12 @@
 # ASSURE mapping tools
 Desktop based tool for viewing, editing and saving road network maps for autonomous vehicle platforms such as Autoware.
 
-### Operating System
-- Docker version. only need Docker and docker compose. 
+### Operating System (Validated)
+- Ubuntu 18.04
+- Ubuntu 22.04 
+- Windows 10 with Docker and WSL
 
-### Docker installation
+### Docker installation (Ubuntu)
 On the host: 
 1. Install [Docker](https://docs.docker.com/desktop/install/ubuntu/#install-docker-desktop).
 2. Test docker works by following the helloworld tutorial. 
@@ -22,22 +24,39 @@ On the host:
 sudo apt install mesa-utils
 ```
 
+### Docker installation (Windows 10)
+On the host: 
+1. Install PowerShell from Microsoft Store. Will be used to run Docker command in the following steps.
+2. Install [Docker](https://docs.docker.com/desktop/install/windows-install/).
+3. Start Docker Desktop from the start menu. 
+3. Test docker works by following the helloworld tutorial. 
+
 ### Before Docker Build 
-Set your data folders by modifying the followiing in the docker compose yaml file ()
+Set your data folders by modifying the followiing in the docker compose yaml file
 ```
 - /home/user/data:/root/data
 ```
 
 
-### Build Docker Image: 
+### Build Docker Image (Ubuntu): 
 ```
 docker compose -f docker-compose-linux-app-nvidia.yaml build
 ```
 
-### Start ASSURE SMT: 
+### Build Docker Image (Windows): 
+```
+docker compose -f docker-compose-windows-wsl-app.yaml build
+```
+
+### Start ASSURE SMT (Ubuntu): 
 ```
 xhost + local:
 docker compose -f docker-compose-linux-app-nvidia.yaml up
+```
+
+### Start ASSURE SMT (Windows): 
+```
+docker compose -f docker-compose-windows-wsl-app.yaml up
 ```
 
 ### Supported Roadnetwork Map formates (Load)
